@@ -1,0 +1,38 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{board.name}}">
+  <ion-content class="padding">
+              <div class="row" ng-repeat="lucky in board.luckies" ng-if="$index % 2 == 0">
+                    <div class="col col-50" ng-if="$index < board.luckies.length">
+                          <div class="list card">
+                            <div class="item item-divider">
+                              <p>{{board.luckies[$index].title}}</p>
+                            </div>
+                              <div class="item item-image relative">
+                                <img class="homeTitleImg" src="{{board.luckies[$index].url}}"/>
+                              </div>
+                              <div class="item item-text-wrap">
+                                <p>{{board.luckies[$index].comment}}</p>
+                            </div>
+                          </div>
+                    </div>
+                     <div class="col col-50" ng-if="$index + 1 < board.luckies.length">
+                          <div class="list card">
+                            <div class="item item-divider">
+                              <p>{{board.luckies[$index + 1].title}}</p>
+                            </div>
+                              <div class="item item-image relative">
+                                <img class="homeTitleImg" src="{{board.luckies[$index + 1].url}}"/>
+                              </div>
+                               <div class="item item-text-wrap">
+                                  <p>{{board.luckies[$index + 1].comment}}</p>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+  </ion-content>
+</ion-view>

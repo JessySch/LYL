@@ -1,0 +1,15 @@
+<ion-view view-title="Boards">
+  <ion-content class="padding" ng-init="load()">
+    <div class="list card" ng-repeat="board in user.luckyBoards">
+      <a class="boardsListLink" href="#/tab/luckies/{{board.id}}">
+        <div class="item item-image relative">
+          <img class="homeTitleImg" src="{{board.luckies[0].url}}">
+          <p >
+              <h2 class="absolute-header"><b style="font-size:20px;">{{getDaysToEvent(board.targetDate)}}</b><b> Days</b> to {{board.name}}</h2>
+            </a> 
+            </p>
+        </div>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

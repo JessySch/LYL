@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+img.homeTitleImg{
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+img.homeTitleImg:hover{
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.relative{
+    position:relative; width:100%;
+}
+
+.absolute-header{
+    position:absolute; top:35%; font-size:50px; font-family:"Comic Sans MS"; background:rgba(251,251,251,0.5);
+    padding-top:25px; width:100%; height:30%; text-align:center;
+    animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+
+}
+
+.absolute-header:hover + img.homeTitleImg{
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.absolute-desc{
+    position:absolute; bottom:20%; font-size:30px; font-family:"Comic Sans MS"; background:rgba(251,251,251,0.5);
+    padding:10px 20px; width:100%; height:25%; text-align:center;
+}
